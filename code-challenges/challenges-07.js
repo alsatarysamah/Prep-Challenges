@@ -22,16 +22,16 @@
 
 const objLat = (obj) => {
     // write your code here
-  
-let fNameCapital = obj.firstName.charAt(0).toUpperCase() + obj.firstName.slice(1)+" ";
 
-let lNameCapital = obj.lastName.charAt(0).toUpperCase() + obj.lastName.slice(1);
+    let fNameCapital = obj.firstName.charAt(0).toUpperCase() + obj.firstName.slice(1) + " ";
 
- let fullName =fNameCapital+lNameCapital;
-   let str=`my name is ${fullName} I am ${obj.age} YO, and I love ${obj.hobby}.`;
- 
-  return str;
-   //console.log(fNameCapital+lNameCapital);
+    let lNameCapital = obj.lastName.charAt(0).toUpperCase() + obj.lastName.slice(1);
+
+    let fullName = fNameCapital + lNameCapital;
+    let str = `my name is ${fullName} I am ${obj.age} YO, and I love ${obj.hobby}.`;
+
+    return str;
+    //console.log(fNameCapital+lNameCapital);
 };
 // -------------------------------------------------------------------------------------------------------
 
@@ -96,38 +96,55 @@ let lNameCapital = obj.lastName.charAt(0).toUpperCase() + obj.lastName.slice(1);
 
 const cvFormatter = (arr) => {
     // write your code here
-  
-    let retArr=[];
-    let fNameCapital="";
-    let lNameCapital="";
-    let fName="";
-  
-function empInfo(fullName,tech)
-{
-    this.fullName=fullName;
-    this.tech=tech;
-};
-    for (var i = 0; i < arr.length; i++)
-    {
-        let e1=new empInfo ("sss","ssss");
-        if(arr[i].yearsOfExperience >1)
-        {
-           
-            e1.tech=arr[i].tech;
-if (arr[i].lastName!==null && arr[i].firstName!==null)
-{
-    fName =arr[i].lastName+" "+arr[i].lastName;
-     e1.fullName=fName
-    
-    retArr.push(e1);
-}
-    }
-    console.log(retArr[i]);
-}
 
+    let retArr = [];
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i].yearsOfExperience > 1) {
+
+            let emp = {
+
+                fullName: `${arr[i].firstName}${arr[i].lastName ? " " + arr[i].lastName : ""}`,
+                tech: arr[i].tech
+            }
+
+            retArr.push(emp);
+        }
+
+
+
+    }
     return retArr;
-   
-};
+}
+//     let fNameCapital="";
+//     let lNameCapital="";
+//     let fName="";
+
+// function empInfo(fullName,tech)
+// {
+//     this.fullName=fullName;
+//     this.tech=tech;
+// };
+//     for (var i = 0; i < arr.length; i++)
+//     {
+//         let e1=new empInfo ("sss","ssss");
+//         if(arr[i].yearsOfExperience >1)
+//         {
+
+//             e1.tech=arr[i].tech;
+// if (arr[i].lastName!==null && arr[i].firstName!==null)
+// {
+//     fName =arr[i].lastName+" "+arr[i].lastName;
+//      e1.fullName=fName
+
+//     retArr.push(e1);
+// }
+//     }
+//     console.log(retArr[i]);
+// }
+
+//     return retArr;
+
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
