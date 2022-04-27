@@ -123,7 +123,7 @@ const employeesBonus = (arr) => {
     let salary=0;
     arr.forEach(element => {
         salary = Number(element.salary.substr(0, 4));
-        console.log(salary);
+     
         if (element.workHours > 8) {
 
             salary += 100;

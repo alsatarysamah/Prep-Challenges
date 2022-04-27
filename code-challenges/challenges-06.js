@@ -51,7 +51,7 @@ const sumNums = (arr)=>{
 //console.log(typeof arr[i]);
     if((typeof arr[i])==="number" )
     {
-        console.log(sum);
+      
         sum=sum+arr[i];
 
     }
